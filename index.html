@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #000000dc;
+        }
+       .Principal{width: 1500px; height: 800px;}
+       .contenedor{
+            background-color: rgba(0, 0, 0, 0.553); width: 1040px; height: 530px;
+            border-radius: 20px; margin-left: 210px; margin-top: 100px; display: flex;
+       }
+
+        .text{width: 60px; height: 30px; margin-top: 25px; margin-left: 50px; font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 14px;}
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .cont-inferior{width: 540px; height: 110px;}
+        .input-container input {
+            width: 400px; height: 20px; margin-left: 45px;
+            padding: 15px 20px;
+            font-size: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .input-container input::placeholder{color: #9ca3af;}
+        .input-container input:focus{
+            outline: none;
+            border-color: #01acb4;
+            box-shadow: 0 0 0 3px rgba(1, 172, 180, 0.1);
+            transform: translateY(-2px);
+        }
+        .input-container input:hover{
+            border-color: #87f9ff;
+            box-shadow: 0 4px 15px rgba(1, 172, 180, 0.1);
+        }
+        .button {
+            width: 250px; height: 55px; margin-top: 30px; 
+            margin-left: 140px; border-radius: 20px;
+            padding: 15px 24px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            background-color: #2cd7f9;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .button:hover {
+            box-shadow: 0 0 25px #4cfff0;
+            transform: translateY(-3px);
+        }
+        .c1{
+            background-color: #000000;
+            width: 1560px; height: 530px;
+        }
+
+        /* 📱 --- RESPONSIVE DESIGN SIN CAMBIAR ESTILO --- */
+        @media (max-width: 1200px) {
+          .Principal {
+            width: 100%;
+            height: auto;
+          }
+
+          .contenedor {
+            width: 90%;
+            height: auto;
+            margin: 80px auto;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+          }
+
+          .c1 {
+            width: 100%;
+            height: auto;
+            text-align: center;
+          }
+
+          .c1 img {
+            width: 60%;
+            max-width: 300px;
+            height: auto;
+          }
+
+          .c2 {
+            width: 100%;
+            text-align: center;
+          }
+
+          .input-container {
+            display: flex;
+            justify-content: center;
+          }
+
+          .input-container input {
+            width: 400px;
+            max-width: 90%;
+            height: 45px;
+            margin-left: 0;
+          }
+
+          .button {
+            display: block;
+            margin: 25px auto;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .contenedor {
+            width: 95%;
+            margin-top: 60px;
+          }
+
+          .c1 img {
+            width: 65%;
+            max-width: 250px;
+          }
+
+          .input-container input {
+            width: 350px;
+            max-width: 85%;
+            height: 40px;
+          }
+
+          .button {
+            width: 230px;
+            height: 50px;
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .contenedor {
+            width: 95%;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+          }
+
+          .c1 img {
+            width: 70%;
+            max-width: 200px;
+          }
+
+          .text h3 {
+            font-size: 14px;
+          }
+
+          .input-container input {
+            width: 280px;
+            max-width: 90%;
+            height: 38px;
+            font-size: 0.9rem;
+          }
+
+          .button {
+            width: 200px;
+            height: 45px;
+            font-size: 0.9rem;
+          }
+        }
+
+    </style>
+
+    <div class="Principal">
+        <div class="contenedor">
+            <div class="c1">
+                <img src="./logo.svg" alt="" style="margin-top: 15px;">
+            </div>
+
+            <div class="c2">
+                <br><br><br>           
+                <div class="text">
+                    <h3 id="m1" style="color: white;">Nombre</h3>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="name" name="name" placeholder="Nombre" required />
+                </div>
+
+                <div class="text">
+                    <h3 id="m1" style="color: white;">Usuario</h3>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="usuario" name="iusuario" placeholder="Usuario" required />
+                </div>
+
+                <div class="text" style="color: white;">
+                    <h3 id="m1">Contraseña</h3>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required />
+                </div>
+
+                <div class="cont-inferior">
+                    <button type="submit" class="button" onclick="validarAcceso()">Iniciar Sesion</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+  function validarAcceso() {
+    let usu = document.getElementById("usuario").value.trim();
+    let pass = document.getElementById("password").value.trim();
+    let nombre = document.getElementById("name").value.trim();
+
+    if (usu === "Examen" && pass === "123") {
+      localStorage.setItem("nombreUsuario", nombre);
+      window.location.href = "exa.html";
+    } else {
+      alert("Acceso incorrecto");
+    }
+  }
+</script>
+
+</body>
+</html>

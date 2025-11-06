@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen</title>
+  <!-- Fuente moderna y legible -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000000dc;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #bienvenid {
+      text-align: center;
+      font-size: 28px;
+      color: #ffffff;
+      margin-top: 20px;
+    }
+
+    .contenedor {
+      width: 800px;
+      height: auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      padding: 25px 0;
+    }
+
+    .contenedor p:first-of-type {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .p0 {
+      width: 85%;
+      margin: 0 auto;
+      font-size: 16px;
+      color: #000;
+      line-height: 1.6;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    input[type="radio"] {
+      transform: scale(1.1);
+      margin-right: 6px;
+      accent-color: #1bd9ff;
+    }
+
+    .btn {
+      width: 85%;
+      margin: 25px auto;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      height: 50px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      background-color: #1bd9ff;
+      color: rgb(0, 0, 0);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      font-family: "Poppins", sans-serif;
+    }
+
+    button:hover {
+      box-shadow: 0 0 25px #4cfff0;
+      transform: translateY(-3px);
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 1024px) {
+      .contenedor {
+        width: 90%;
+      }
+
+      .p0 {
+        width: 90%;
+        font-size: 15px;
+      }
+
+      button {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #bienvenid {
+        font-size: 24px;
+      }
+
+      .contenedor {
+        width: 95%;
+        margin: 20px auto;
+      }
+
+      .p0 {
+        width: 90%;
+        font-size: 15px;
+      }
+
+      button {
+        width: 85%;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #bienvenid {
+        font-size: 22px;
+      }
+
+      .contenedor {
+        width: 95%;
+        margin: 15px auto;
+        padding: 10px 0;
+      }
+
+      .p0 {
+        width: 90%;
+        font-size: 14px;
+      }
+
+      button {
+        width: 90%;
+        height: 45px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <p id="bienvenid"></p>
+
+  <div class="contenedor">
+    <p><strong>ANÁLISIS Y DESARROLLO DE SW</strong></p>
+
+    <div class="p0">
+      <label><strong>1.- ¿Qué es la arquitectura de Software?</strong></label><br>
+      <input type="radio" name="1" value="0"> Plano de construcción.<br>
+      <input type="radio" name="1" value="1"> Define cómo se organizan los componentes del software.
+      <br><br>
+
+      <label><strong>2.- ¿Esta metodología es conocida como Waterfall?</strong></label><br>
+      <input type="radio" name="2" value="1"> Cascada.<br>
+      <input type="radio" name="2" value="0"> Espiral.
+      <br><br>
+
+      <label><strong>3.- ¿Qué es una sesión PHP?</strong></label><br>
+      <input type="radio" name="3" value="0"> Inicio de sesión para poder usar el lenguaje.<br>
+      <input type="radio" name="3" value="1"> Mecanismo que guarda información del usuario mientras navega en otras páginas.
+      <br><br>
+
+      <label><strong>4.- ¿Esta metodología avanza por ciclos o 'vueltas'?</strong></label><br>
+      <input type="radio" name="4" value="0"> Cascada.<br>
+      <input type="radio" name="4" value="1"> Espiral.
+      <br><br>
+
+      <label><strong>5.- ¿Manera de iniciar una sesión en PHP?</strong></label><br>
+      <input type="radio" name="5" value="1"> session_start();<br>
+      <input type="radio" name="5" value="0"> $Session_Start();
+      <br><br>
+
+      <label><strong>6.- ¿Es el array superglobal?</strong></label><br>
+      <input type="radio" name="6" value="0"> $SESSION;<br>
+      <input type="radio" name="6" value="1"> $_SESSION
+      <br><br>
+
+      <label><strong>7.- ¿Qué se hace en la columna 'Qué hacer'?</strong></label><br>
+      <input type="radio" name="7" value="0"> Las actividades ya programadas.<br>
+      <input type="radio" name="7" value="1"> Escribir las actividades que se deben hacer antes de programar.
+      <br><br>
+
+      <label><strong>8.- ¿Forma parte de la arquitectura de software?</strong></label><br>
+      <input type="radio" name="8" value="1"> Arquitectura en capas.<br>
+      <input type="radio" name="8" value="0"> Arquitectura lineal.
+      <br><br>
+
+      <label><strong>9.- ¿Usa tres columnas para organizar y elaborar un sistema?</strong></label><br>
+      <input type="radio" name="9" value="0"> Metodología Waterfall.<br>
+      <input type="radio" name="9" value="1"> Metodología Kanban.
+      <br><br>
+
+      <label><strong>10.- ¿Qué metodología no permite avanzar en el desarrollo del sistema si no se termina una fase?</strong></label><br>
+      <input type="radio" name="10" value="1"> Cascada.<br>
+      <input type="radio" name="10" value="0"> Espiral.
+    </div>
+
+    <div class="btn">
+      <button onclick="verificar()">Verificar</button>
+    </div>
+  </div>
+
+  <script>
+    const nombreUsuario = localStorage.getItem("nombreUsuario");
+    if (nombreUsuario) {
+      document.getElementById("bienvenid").innerText = `Hola, ${nombreUsuario}`;
+    }
+
+    function verificar() {
+      let total = 10;
+      let correctas = 0;
+
+      for (let i = 1; i <= total; i++) {
+        let opciones = document.getElementsByName(i);
+        for (let j = 0; j < opciones.length; j++) {
+          if (opciones[j].checked && opciones[j].value == "1") {
+            correctas++;
+          }
+        }
+      }
+
+      let calificacion = (correctas / total) * 10;
+      alert(`Respuestas correctas: ${correctas}/${total}\nCalificación: ${calificacion.toFixed(1)}/10`);
+    }
+  </script>
+
+</body>
+</html>
